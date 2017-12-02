@@ -1,0 +1,33 @@
+-CONTROLE :
+
+	W : avancer.
+	A : deplacement lateral gauche.
+	D : deplacement lateral droit.
+	S : reculer.
+
+	Q : rotation gauche.
+	E : rotation droite.
+
+	TAB : changement d'arme equiper.
+
+-MAP :
+
+	M : pour afficher/retirer.
+	Le bloc rouge represnte le joueur.
+	Les bloc blanc represente les case libre.
+	Les bloc noir represente les mur.
+	Les bloc bleu represente les passage secret.
+	Chaque mure dispose d'une couleur respective selon son orientation ( Nord Sud Est Ouest) ou son type ( bleu passage secret);
+
+-REGLE DES FICHIER MAP :
+
+	LA map se compose de chiffre comprie entre 0 et 3
+		1 pour les mur.
+		3 pour les passage secret.
+		0 pour les case libre.
+	La map doit obligatoirement etre entourer de mur (de 1)
+	Une carte est considerer comme valide si toute les extrimiter son bien des mur (des 1) et qu'il y est au moin 1 carer de 4x4 de case libre (0) pour le spawn du personnage.
+
+	Le spwan du joueur se trouvera sur le carer de 4x4 le plus en haut a gauche.
+
+	Map disponible dans le repertoire "maps"

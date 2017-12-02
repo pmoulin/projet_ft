@@ -1,0 +1,14 @@
+-FRACTAL :
+
+JULIA
+MANDELBROT
+BURN SHIP
+
+-Execution :
+
+./FRACTOL J
+./FRACTOL M
+./FRACTOL B
+
+-Fenetre explicative des differente commande au lancement du programme.
+-Explication sur terminal si le parametre n'est pas valide.
