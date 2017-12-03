@@ -1,18 +1,18 @@
-Object :
-Cone ilimiter/limiter
-cylindre ilimiter/limiter
-plan ilimiter/ilimiter.
-Cube
-cercle
-sphere
-aussi disponible en object negatif.
+Objets disponibles:
+	Cône illimiter/limiter
+	Cylindre illimiter/limiter
+	Plan illimiter/ilimiter.
+	Cube
+	Cercle
+	Sphère
+	(aussi disponible en objet negatif).
 
 Interface :
-cree / modifier une scene.
-appliquer un filtre (sepia/flou/rouge/blue/vert).
-modification de l'anti aliasing / ambiance.
-Sauvegarde de la scene en cour en .json (enrregistrer dans scene_files).
-Sauvegarde de l'image generer en .BMP (dans image/file).
-Chargement de texture/ scene.
-modification des lumiere / camera.
-cree / modifier / supprimer un objet
+	Créer / Modifier une scène.
+	Appliquer un filtre (sepia/flou/rouge/blue/vert).
+	Modification de l'anti-aliasing / ambiance.
+	Sauvegarder de la scene en cours en .json (enrregistrée dans scene_files).
+	Sauvegarder de l'image générer en .BMP (dans image/file).
+	Chargement de textures/scenes.
+	Modification des lumière / camera.
+	Créer / Modifier / Supprimer un objet.

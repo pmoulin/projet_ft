@@ -1,14 +1,14 @@
--FRACTAL :
+- FRACTALES DISPONIBLES:
 
 JULIA
 MANDELBROT
 BURN SHIP
 
--Execution :
+- Exemples d'execution :
 
 ./FRACTOL J
 ./FRACTOL M
 ./FRACTOL B
 
--Fenetre explicative des differente commande au lancement du programme.
--Explication sur terminal si le parametre n'est pas valide.
+- Fenêtre explicative des differentes commandes au lancement du programme.
+- Explications sur le terminal si le parametre n'est pas valide.

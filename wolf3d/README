@@ -1,33 +1,33 @@
 -CONTROLE :
 
 	W : avancer.
-	A : deplacement lateral gauche.
-	D : deplacement lateral droit.
+	A : deplacement latéral à gauche.
+	D : deplacement latéral à droite.
 	S : reculer.
 
 	Q : rotation gauche.
 	E : rotation droite.
 
-	TAB : changement d'arme equiper.
-
--MAP :
-
+	TAB : changement d'arme equipé.
 	M : pour afficher/retirer.
-	Le bloc rouge represnte le joueur.
-	Les bloc blanc represente les case libre.
-	Les bloc noir represente les mur.
-	Les bloc bleu represente les passage secret.
-	Chaque mure dispose d'une couleur respective selon son orientation ( Nord Sud Est Ouest) ou son type ( bleu passage secret);
+
+- OPTION MAP EN JEU:
+
+	Le bloc rouge représente le joueur.
+	Les bloc blanc représente les cases practicables.
+	Les bloc noir représente les murs.
+	Les bloc bleu représente les passages secrets.
+	Chaque mur dispose d'une couleur respective associée selon son orientation ( Nord Sud Est Ouest) ou son type (bleu);
 
 -REGLE DES FICHIER MAP :
 
-	LA map se compose de chiffre comprie entre 0 et 3
-		1 pour les mur.
-		3 pour les passage secret.
-		0 pour les case libre.
-	La map doit obligatoirement etre entourer de mur (de 1)
-	Une carte est considerer comme valide si toute les extrimiter son bien des mur (des 1) et qu'il y est au moin 1 carer de 4x4 de case libre (0) pour le spawn du personnage.
+	LA map se compose de chiffres compris entre 0 et 3
+		1 pour les murs.
+		3 pour les passages secrets.
+		0 pour les cases praticables.
+	La map doit obligatoirement être entourée de murs (1)
+	Une carte est considerée comme valide si toutes les extrimités sont bien des mur (1). Pour definir la zone de départ, il y faut au moins un ensemble de dimensions 4x4 cases praticables (0).
 
-	Le spwan du joueur se trouvera sur le carer de 4x4 le plus en haut a gauche.
+	La zone de dimension 4x4 en cases praticables (0) la plus en haut à gauche sera automatiquement comme zone de départ.
 
-	Map disponible dans le repertoire "maps"
+	Des fichiers maps sont disponibles dans le repertoire "/maps".

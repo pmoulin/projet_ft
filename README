@@ -4,22 +4,20 @@ Pour commencer de la programmation graphique.
 FdF propose de représenter le maillage en "fils de fer" d'un terrain en 3D.
 
 Get_next_line :
-Fonction permetant de recuperer ligne par ligne le contenue d'un fichier.
+Fonction permettant de recuperer ligne par ligne le contenu d'un fichier.
 
 LIBFT :
-Une replique de certaine fonction de la libc (voir pdf).
+Une replique de certaines fonctions de la libc (voir pdf joint).
 
 Fract_ol :
-
-Programmation 2D et l'univers psychédelique des fractales.
-grâce à ce projet réaliser avec la minilibX.
+Programmation 2D et représentation des fractales (JULIA, MANDELBROT, BURNING SHIP),
+grâce à ce projet réalisé a l'aide de la minilibX.
 
 Wolf3d :
-Inspiré du célèbre jeu éponyme des années 90 qui fut le premier First Person Shooter.
+Inspiré du célèbre jeu éponyme des années 90 qui fût le premier First Person Shooter.
 ce projet permet d'aborder la technique du ray-casting.
 Le but est de représenter une vue dynamique à l'intérieur d'un labyrinthe dans lequel on peut se déplacer.
 
-RT "Ray tracing" :
-
-les principes fondamentaux du Raytracing : la création d'images de synthèses par ordinateur.
-Ce projet fera réaliser des scènes impliquant des objets, des lumières, effet miroir, transparence, découpe des objets, applications de textures....
+RT "Ray tracing" : (Projet en groupe de 4)
+Les principes fondamentaux du Raytracing : la création d'images de synthèses par ordinateur.
+Ce projet réalise des scènes impliquant des objets, des lumières, effet miroir, transparence, découpe des objets, applications de textures...
