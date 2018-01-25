@@ -6,7 +6,7 @@
 /*   By: phmoulin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/05 13:24:30 by phmoulin          #+#    #+#             */
-/*   Updated: 2016/11/16 16:29:48 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/01/25 10:08:52 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ int					ft_factorial(int nb);
 int					ft_power(int b, int power);
 
 size_t				ft_countwords(char const *s, char c);
-size_t				ft_strlcat(char *dest, const char *src, size_t size);
 
 char				*ft_strdup(const char *s);
 char				*ft_strcpy(char *dest, const char *src);
