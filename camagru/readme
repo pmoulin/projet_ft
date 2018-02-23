@@ -1,0 +1,38 @@
+Installation de la bdd : 
+	install.php
+Login test :
+	phmoulin
+mots de pass test :
+	123456789
+
+Descrition : 
+	un petit site Instagram-like permettant à des utilisateurs de réaliser et partager des photo-montages.
+	langage : php, html, css, js et aucune framworks.
+	fonctionnalités de base rencontrées sur la majorité des sites possédant une base utilisateur.
+
+sujet :
+	camagru.fr.pdf
+
+fonctionnelle :
+	Membres :
+		- Connexion
+		- inscription avec verification par mail (lien unique)
+		- reset password (manque juste un lien vers la page)
+		- modification du login, mots de passe et adresse mail d'un compte.
+
+	Edition : 
+		- upload d'une photo au format .jpg et .png pour les utilisateur connecter.
+		- galerie avec pagination visible pour tout les utilisateur.
+		- galerie personnelle avec toute les images poster/modifier de l'utilisateur, accessible si l'utilisateur est connecte.
+		- ajout de commentaire sur une image (aller dans la galerie, cliquer sur une image, cliquer sur le bouton commentaire en dessous de l'image); 
+		- notification par mail pour chaque nouveaux commentaires.
+
+en cour : 
+	- espace membre.
+	- Securite.
+	- optimisation req sql
+
+a faire :
+	- Pouvoir like une photo.
+	- ajout de filtre sur une image.
+	- prendre une photo avec la cam.

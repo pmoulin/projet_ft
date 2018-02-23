@@ -21,3 +21,6 @@ Le but est de représenter une vue dynamique à l'intérieur d'un labyrinthe dan
 RT "Ray tracing" : (Projet en groupe de 4)
 Les principes fondamentaux du Raytracing : la création d'images de synthèses par ordinateur.
 Ce projet réalise des scènes impliquant des objets, des lumières, effet miroir, transparence, découpe des objets, applications de textures...
+
+ft_Printf : 
+Re-coder une grande partie de la fonction printf.
