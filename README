@@ -24,3 +24,8 @@ Ce projet réalise des scènes impliquant des objets, des lumières, effet miroi
 
 ft_Printf : 
 Re-coder une grande partie de la fonction printf.
+
+Camagru :
+    un petit site Instagram-like permettant à des utilisateurs de réaliser et partager des photo-montages.
+    langage : php, html, css, js et aucune framworks.
+    fonctionnalités de base rencontrées sur la majorité des sites possédant une base utilisateur.
