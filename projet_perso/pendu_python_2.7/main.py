@@ -1,13 +1,11 @@
 import random;
 import os;
 
-# print("hello world");
 fo = open("./dico/liste_francais.txt", 'r');
 x = 0;
 nb_line = 0;
 all_line = fo.read();
 v = 0;
-# line = [];
 for v in all_line :
 	if v == '\n' :
 		nb_line += 1;
@@ -16,19 +14,17 @@ x = random.randint(0, nb_line);
 line = all_line.split("\n");
 word_valid = 0;
 while word_valid != 1 :
-	# word_valid == 0;
 	x = random.randint(0, nb_line);
 	word = line[x];
 	for carac in word :
-		# print "ascii == %d" % ord(carac);
 		if (ord(carac) >= 65 and ord(carac) <= 90) or (ord(carac) >= 97 and ord(carac) <= 122) or ord(carac) == 13:
 			word_valid = 1
-			# print "mots valide :%s" % word;
 		else :
 			word_valid = -1;
-			# print "mots invalide :%s" % word;
 			break ;
 
+## fin parsing
+## choix de trois lettre par user
 word_len = len(word) - 1;
 word_cacher = '_' * word_len;
 word_cacher = list(word_cacher)
@@ -36,11 +32,11 @@ choice = 0;
 while choice == 0 :
 	print "le mot fait %d caractere !" % word_len;
 	print "%s" % word_cacher;
-	first_letter = raw_input("entrer 5 lettre :");
+	first_letter = raw_input("entrer 3 lettre :");
 #  verification de la rentrer du joueur;
-	if len(first_letter) != 5 :
+	if len(first_letter) != 3 :
 		print "vous n'avez pas rentrer le bon nombre de lettre";
-	elif len(first_letter) == 5 :
+	elif len(first_letter) == 3 :
 		choice = -1;
 		while (choice == -1) :
 			confirmation = raw_input("vous avez donner : >%s< vous confirmer ?\n(Y/n) : " % first_letter);
@@ -52,11 +48,9 @@ while choice == 0 :
 			elif confirmation != "n" and confirmation != "y" :
 				confirmation = raw_input("(y/n)");
 			elif confirmation == "n" or confirmation == "N" :
-				break ;
-# print type(word_cacher)
+				choice = 0;
 letter_place = 0;
-
-
+#### fin choix des trois lettre
 #### compare lettre entre avec le mots a trouver
 print word_cacher;
 word = list(word);
@@ -68,14 +62,13 @@ for letter_word in word :
 			word_cacher[letter_place] = letter_user;
 			word_len -= 1;
 	letter_place += 1;
-# print ("le mot a trouver est :\n>>>>>>>>>>>>>>>>%s<<<<<<<<<<<<<<<<<<" % word_cacher);
-# debut game
+
+## les trois lettres on ete placer si elle se trouvais dans le mot
+## debut game
 status = 1;
-# first_letter = (list)first_letter;
 action = 6;
 good = 0;
 pos = 0;
-# word_len = len(word) - 1;
 while (status == 1) :
 	nb_action = 0;
 	while (word_len > 0) :
@@ -84,7 +77,6 @@ while (status == 1) :
 		letter_user = '';
 		os.system('clear')
 		print (">>>>>>>>>>>>>>>>%s<<<<<<<<<<<<<<<<<<" % word_cacher);
-		# print "line choisi = %s" % word;
 		print "il reste encore %d coup." % action;
 		print "et il te reste %d lettre(s) a trouver\n" % word_len;
 
@@ -111,38 +103,9 @@ while (status == 1) :
 			print "echec";
 
 			break ;
+	# fin du jeux
 	if (action > 0) :
 		print "bien jouer tu a trouver le mots cacher.";
 	print ("la mots cacher etait :\n>>>>>>>>>>>>>>>>%s<<<<<<<<<<<<<<<<<<" % word);
-	# confirmation = raw_input("Veux tu rejouer ?? (y/n) :");
-	# if (confirmation == 'n' or confirmation == 'N') :
 	print "Bonne journee et a bientot !";
-	exit();		
-
-# # check ocurence
-# 						if word[letter_user] == 0 or word_cacher[letter_user] != 0 :
-# 							break ;
-# 						count_nb_letter += 1;
-# # ajout a word_cacher
-# 					first_letter[] = letter_user;
-# 					word_cacher[letter_place] = letter_user;
-# 					word_len -= 1;
-# 					good = 1;
-# 					break ;
-# 				letter_place += 1;
-# 			print action;
-# 			if (good == 0) :
-# 				action -= 1;
-# 				print "La lettre ne se trouve pas dans le mot, retente ta chnce ! :)";
-# 			else :
-# 				good = 0;
-# 				print "bien jouer :D";
-
-
-# print word_cacher ;
-
-# etat_game = 0;
-# while (etat_game == 1) :
-
-
-	# print("FAIL :(");
+	exit();
