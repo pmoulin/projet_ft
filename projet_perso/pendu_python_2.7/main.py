@@ -76,12 +76,12 @@ action = 6;
 good = 0;
 pos = 0;
 # word_len = len(word) - 1;
+letter_user = '';
 while (status == 1) :
 	nb_action = 0;
 	while (word_len > 0) :
 		pos = 0;
 		good = 0;
-		letter_user = '';
 		os.system('clear')
 		print (">>>>>>>>>>>>>>>>%s<<<<<<<<<<<<<<<<<<" % word_cacher);
 		# print "line choisi = %s" % word;
@@ -90,6 +90,7 @@ while (status == 1) :
 
 		if (nb_action > 0) :
 			print "precedent coup : %s" % letter_user;
+		letter_user = '';
 		letter_user = raw_input("entrer une lettre : ");
 		nb_action += 1;
 # check word
