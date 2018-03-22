@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/04 13:23:39 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/31 11:56:58 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 16:49:34 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int			check_param_valid(t_env *e, const char *restrict format, int i)
 {
 	int		x;
 
+	(void)e;
 	x = 0;
 	if (format[i] == '.')
 		i++;
@@ -25,8 +26,10 @@ int			check_param_valid(t_env *e, const char *restrict format, int i)
 	format[i] == 'X' || format[i] == 'u' || format[i] == 'U' || format[i] == 'o'
 	|| format[i] == 'O' || format[i] == '%')
 		x = 1;
-	else if ((format[i] >= 'a' && format[i] <= 'z' || format[i] >= 'A'
+	else if ((format[i] >= 'a' && format[i] <= 'z') || (format[i] >= 'A'
 	&& format[i] <= 'Z'))
+		return (0);
+	else
 		return (0);
 	i++;
 	return (x);

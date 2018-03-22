@@ -6,13 +6,13 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/31 13:55:36 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/31 14:00:44 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 16:57:12 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*convert_nb_to_letter(int *i2, char type)
+char	*conv_nb_to_letter(int *i2, char type)
 {
 	char	*tmp;
 

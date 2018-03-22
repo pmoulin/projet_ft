@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:38:01 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/11/26 15:05:12 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 15:28:47 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static	char	*ft_calcule(char *dest, int i, long long int a, int d)
 {
 	unsigned long long int nb;
 
+	d = 0;
 	nb = (a < 0) ? -a : a;
 	while (nb)
 	{
@@ -56,7 +57,7 @@ char			*ft_llitoa(unsigned long long int n)
 	char					*dest;
 	int						nega;
 
-	a = (n < 0) ? -n : n;
+	a = n;
 	nega = ((long long int)n > 0) ? 0 : 1;
 	i = 0;
 	d = nb_elem(a);

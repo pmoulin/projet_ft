@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 15:02:37 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/30 13:59:46 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 15:32:08 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static void	lenght_and_preci_for_p_3(t_env *e, char *tmp, char *param, int x)
 			tmp[i++] = ' ';
 }
 
-static int	lenght_and_preci_for_p_4(t_env *e, char *tmp, char *param, int x)
+static int	lenght_and_preci_for_p_4(t_env *e, char *tmp, int x)
 {
 	int		i;
 	int		t;
@@ -102,7 +102,7 @@ void		lenght_and_preci_for_p_1(t_env *e, char *param, int v)
 	char	*tmp;
 	int		t;
 
-	i = 0;
+	i = (v != 0) ? 0 : 0;
 	t = (e->t < 0) ? -e->t : e->t;
 	alloc_space(e, param, &tmp);
 	if (e->t2 > t && e->h_tag != 1)
@@ -111,7 +111,7 @@ void		lenght_and_preci_for_p_1(t_env *e, char *param, int v)
 		lenght_and_preci_for_p_3(e, tmp, param, (int)ft_strlen(param));
 	else if (e->t2 > (int)ft_strlen(param) || t >= e->t2)
 	{
-		i = lenght_and_preci_for_p_4(e, tmp, param, (int)ft_strlen(param));
+		i = lenght_and_preci_for_p_4(e, tmp, (int)ft_strlen(param));
 		t = 0;
 		while (param[t])
 			tmp[i++] = param[t++];

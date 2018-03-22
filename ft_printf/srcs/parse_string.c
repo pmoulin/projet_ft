@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/04 16:27:00 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/31 17:07:30 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 16:54:29 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static int	parse_signe_and_space(t_env *e, const char *restrict format, int i)
 		e->plus = 1;
 	else if (format[i] == ' ')
 	{
-		if (i1 = check_type(i + 1, format, e) != 0 || (format[i + 1] >= '0'
+		if ((i1 = check_type(i + 1, format, e)) != 0 || (format[i + 1] >= '0'
 		&& format[i + 1] <= '9'))
 			e->i = 3;
 		i++;
@@ -97,6 +97,8 @@ int *i1)
 	else if (i != -2 && e->tv[0] == 0 && e->tv[1] == 0 && s[i] != '\0'
 	&& s[i] != '%' && check_param_valid(e, s, i) == 0)
 		return (-2);
+	else
+		return (-2);
 	return (i);
 }
 
@@ -116,14 +118,14 @@ int			parse_string(const char *restrict format, va_list *ap,
 		if (format[i] == '%' || i1 == -5)
 			break ;
 		(format[i] == '\0') ? i1 = -1 : 0;
+		if (format[i] == '*')
+			break ;
 	}
 	(format[i] == '\0' && e->t > 0 && e->n == 1) ? e->t = -e->t : 0;
 	if (i1 != -1)
 	{
-		if (e->type_convert[0] != '*' && format[i] != 'p')
-			i = parse_param_conv(e, ap, format, i);
-		else
-			i = choice_flag(i, e, ap, format);
+		i = (e->type_convert[0] != '*' && format[i] != 'p') ?
+		parse_param_conv(e, ap, format, i) : choice_flag(i, e, ap, format);
 		if (e->line)
 			ft_putstr_like(e, 0);
 	}

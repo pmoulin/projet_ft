@@ -6,13 +6,13 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 10:18:21 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/10 18:01:40 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 15:29:50 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char		*ft_getwchar(wchar_t c, t_env *e)
+char		*ft_getwchar(wchar_t c)
 {
 	char	*str;
 

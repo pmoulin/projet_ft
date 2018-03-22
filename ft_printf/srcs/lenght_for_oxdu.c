@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/22 14:22:08 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/30 17:37:26 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 15:33:36 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,7 @@ void			lenght_for_oxdu(t_env *e, char *param, int v)
 		e->line[0] = ' ';
 	v = e->pos;
 	e->pos = (e->pos == 0) ? 0 : e->pos;
-	while (i < ft_strlen(tmp) - v)
+	while (i < (int)ft_strlen(tmp) - v)
 	{
 		e->line[e->pos++] = tmp[i++];
 		e->line[e->pos] = '\0';

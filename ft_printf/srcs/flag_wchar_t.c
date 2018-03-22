@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 15:24:41 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/31 16:07:42 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 15:37:01 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int			flag_unsi_c(wchar_t c, t_env *e, int i)
 		e->size_line += 1;
 		return (i);
 	}
-	str = ft_getwchar(c, e);
+	str = ft_getwchar(c);
 	while (str[i1])
 		ft_putchar(str[i1++]);
 	e->size_line += i1;
@@ -69,7 +69,7 @@ static int	count_nb_elem(t_env *e, char **str, wchar_t *s, int *x)
 	*x = 0;
 	while (s[*x])
 	{
-		str[*x] = ft_getwchar(s[*x], e);
+		str[*x] = ft_getwchar(s[*x]);
 		y += (int)ft_strlen(str[*x]);
 		*x += 1;
 		str[*x] = NULL;
@@ -81,7 +81,7 @@ static int	count_nb_elem(t_env *e, char **str, wchar_t *s, int *x)
 
 static void	free_str(t_env *e, int x, int y, char **str)
 {
-	if (e->t2 != 0 && e->t2 > ft_strlen(str[0]))
+	if (e->t2 != 0 && e->t2 > (int)ft_strlen(str[0]))
 	{
 		while (e->t2 > y)
 			y += ft_strlen(str[x++]);

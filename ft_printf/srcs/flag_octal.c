@@ -6,13 +6,13 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/30 19:32:05 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/31 16:07:05 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 15:59:12 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void		flag_o5(t_env *e, char *tmp3, int x)
+static void		flag_o5(t_env *e, char *tmp3)
 {
 	e->line = ft_strdup(tmp3);
 	free(tmp3);
@@ -72,7 +72,7 @@ static int		flag_o3(unsigned long long int i1, char ***tmp, int v, t_env *e)
 	return (x);
 }
 
-static int		flog_o2(t_env *e, unsigned long long int nb, int i, char type)
+static void		flog_o2(t_env *e, unsigned long long int nb, char type)
 {
 	char						**tmp;
 	char						*tmp3;
@@ -98,13 +98,12 @@ static int		flog_o2(t_env *e, unsigned long long int nb, int i, char type)
 		choice_preci_and_lenght_for_oxdu(e, tmp3);
 		free(tmp3);
 	}
-	(e->t == 0 && e->t2 == 0) ? flag_o5(e, tmp3, 0) : 0;
+	(e->t == 0 && e->t2 == 0) ? flag_o5(e, tmp3) : 0;
 }
 
 int				flag_o(unsigned long long int nb, int i, t_env *e, char type)
 {
 	int							v;
-	char						**tmp;
 
 	v = 0;
 	if (nb == 0 && e->t == 0 && e->t2 == 0 && e->h_tag == 0 && e->point == 1)
@@ -121,6 +120,6 @@ int				flag_o(unsigned long long int nb, int i, t_env *e, char type)
 		choice_preci_and_lenght_for_oxdu(e, "\0");
 		return (i);
 	}
-	flog_o2(e, nb, i, type);
+	flog_o2(e, nb, type);
 	return (i);
 }

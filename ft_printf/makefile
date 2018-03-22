@@ -31,16 +31,11 @@ FT_PRINTF_SRC = srcs/ft_printf.c srcs/ft_dtoa.c srcs/parse_string.c \
 				srcs/flag_pointeur.c srcs/flag_unsi.c \
 				srcs/choice_conv_param.c srcs/search_param.c \
 
-
-
-
 OBJ = $(FT_PRINTF_SRC:.c=.o)
 
 FT_PRINTF.INCLUDE = srcs/ft_printf.h srcs/libft.h
 
-FLAGS = -Wall -Wextra -Werror
-
-CC = gcc
+CC = gcc -Wall -Werror -Wextra
 
 all: $(NAME)
 

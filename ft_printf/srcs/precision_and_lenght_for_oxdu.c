@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/28 12:29:55 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/30 13:56:06 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 15:34:59 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,14 @@ static void	preci_and_lenght_for_oxdu_2(t_env *e, int i, char *tmp, char *param)
 		tmp[i++] = param[i1++];
 }
 
-void		precision_and_lenght_for_oxdu(t_env *e, char *param, int v)
+void		precision_and_lenght_for_oxdu(t_env *e, char *param, int i)
 {
 	int		x;
-	int		i;
 	char	*tmp;
 	int		t;
 
-	i = 0;
+	tmp = NULL;
+	i = (i != 0) ? 0 : 0;
 	t = (e->t < 0) ? -e->t : e->t;
 	x = (int)ft_strlen(param);
 	check_space_to_line(e, param);

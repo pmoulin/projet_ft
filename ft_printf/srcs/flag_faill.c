@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/05 09:58:14 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/31 17:20:30 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 13:54:37 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	flag_modu(int i, t_env *e)
 	return (i);
 }
 
-int	printf_faill_param(t_env *e, const char *restrict format, int i, int *i1)
+int	printf_faill_param(t_env *e, const char *restrict format, int i, int i1)
 {
 	int		x;
 	int		t;

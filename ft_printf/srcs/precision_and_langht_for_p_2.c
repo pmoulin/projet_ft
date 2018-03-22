@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/30 13:58:26 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/30 17:37:08 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 15:36:09 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	remp_tab_lenght(char carac, char *param, char **tmp, t_env *e)
 
 	v = 0;
 	i = 0;
-	if (e->t > 0 && (e->p == 0) || (e->p == 1 && e->carac == ' ' && e->t > 0))
+	if (e->t > 0 && ((e->p == 0) || (e->p == 1 && e->carac == ' ' && e->t > 0)))
 	{
 		if (e->carac == '0' && e->plus == 1 && e->n == 0)
 			tmp[0][i++] = '+';
@@ -135,7 +135,7 @@ void		lenght_for_p(t_env *e, char *param, int v)
 	(e->pos != 0) ? e->line[0] = ' ' : 0;
 	v = e->pos;
 	e->pos = (e->pos == 0) ? 0 : e->pos;
-	while (i < ft_strlen(tmp) - v && e->h_tag == 0)
+	while (i < (int)ft_strlen(tmp) - v && e->h_tag == 0)
 		e->line[e->pos++] = tmp[i++];
 	e->line[e->pos] = '\0';
 	free(tmp);

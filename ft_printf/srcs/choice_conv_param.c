@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/31 11:47:19 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/31 11:54:03 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 16:00:47 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,9 +86,7 @@ const char *restrict s, int i)
 		nbr = (long long int)nbr;
 	else if (ft_strcmp(e->type_convert, "j") == 0)
 		nbr = (intmax_t)nbr;
-	else if (ft_strcmp(e->type_convert, "z") == 0)
-		nbr = nbr;
-	else
+	else if (ft_strcmp(e->type_convert, "z") != 0)
 		nbr = (unsigned int)nbr;
 	i = choice_flag_unsi(e, s, i, nbr);
 	return (i);

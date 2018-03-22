@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/03 17:59:28 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/31 17:21:13 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 16:57:38 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,12 +72,12 @@ char ***tmp)
 	{
 		i2 = i1 % 16;
 		i1 = i1 / 16;
-		tmp2 = convert_nb_to_letter((int *)&i2, type);
+		tmp2 = conv_nb_to_letter((int *)&i2, type);
 		if (v-- == 1)
 		{
 			tmp[0][x++] = ft_strdup(tmp2);
 			ft_strdel(&tmp2);
-			tmp[0][x++] = (i1 <= 16) ? convert_nb_to_letter(&i1, type) : 0;
+			tmp[0][x++] = (i1 <= 16) ? conv_nb_to_letter((int *)&i1, type) : 0;
 			tmp[0][x++] = (i1 == 16) ? ft_strdup("01\0") : NULL;
 			break ;
 		}

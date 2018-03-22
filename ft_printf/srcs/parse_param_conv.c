@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/29 14:38:06 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/31 11:44:12 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 13:52:48 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ static int	search_param_convert(t_env *e, int i, const char *restrict format)
 	return (x);
 }
 
-int			check_convert(t_env *e, const char *restrict format, int i, int *i1)
+int			check_convert(t_env *e, const char *restrict format, int i, int i1)
 {
 	int			x;
 	char		c;

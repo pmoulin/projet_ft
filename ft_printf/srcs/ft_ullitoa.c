@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ullita.c                                           :+:      :+:    :+:   */
+/*   ft_ullitoa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 09:38:01 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/11/26 15:05:20 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 16:55:38 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int		nb_elem(unsigned long long int n)
 	int						i;
 	unsigned long long int	nb;
 
-	nb = (n < 0) ? -n : n;
+	nb = n;
 	i = 0;
 	while (nb / 10 > 0)
 	{
@@ -31,7 +31,8 @@ static	char	*ft_calcule(char *dest, int i, unsigned long long int a, int d)
 {
 	unsigned long long int nb;
 
-	nb = (a < 0) ? -a : a;
+	d = 0;
+	nb = a;
 	while (nb)
 	{
 		dest[i] = (nb % 10) + 48;
@@ -56,7 +57,7 @@ char			*ft_ullitoa(unsigned long long int n)
 	char					*dest;
 	int						nega;
 
-	a = (n < 0) ? -n : n;
+	a = n;
 	nega = ((unsigned long long int)n > 0) ? 0 : 1;
 	i = 0;
 	d = nb_elem(a);

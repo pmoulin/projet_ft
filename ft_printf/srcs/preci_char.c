@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/18 12:45:28 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/30 17:32:45 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 16:50:49 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,15 +65,14 @@ static void	precision_and_lenght_s_3(t_env *e, char *param, char *tmp, int x)
 	}
 }
 
-void		precision_and_lenght_for_s(t_env *e, char *param, int v)
+void		precision_and_lenght_for_s(t_env *e, char *param, int i)
 {
 	int		x;
-	int		i;
 	int		t;
 	char	*tmp;
 
 	e->pos = 0;
-	i = 0;
+	tmp = NULL;
 	x = ((int)ft_strlen(param) == 0) ? 6 : (int)ft_strlen(param);
 	t = (e->t < 0) ? -e->t : e->t;
 	if (x > e->t2)
@@ -100,6 +99,7 @@ void		precision_for_s(t_env *e, char *param, int v)
 	int		i;
 	char	*tmp;
 
+	v = 0;
 	e->pos = 0;
 	i = 0;
 	x = (param != NULL) ? (int)ft_strlen(param) : 0;

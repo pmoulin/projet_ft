@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/30 19:27:22 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/30 19:43:14 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 15:38:44 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ static void		modif_content_size(int nb, t_env *e, char **size)
 
 	i = 0;
 	v = 0;
+	nb = 0;
 	tmp = NULL;
 	if (!(tmp = ft_strnew((int)ft_strlen(size[0]))))
 		ft_error("MALLOC_LINE", "MODIF content_size FLAG1");

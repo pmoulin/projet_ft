@@ -6,7 +6,7 @@
 /*   By: phmoulin <phmoulin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 17:40:19 by phmoulin          #+#    #+#             */
-/*   Updated: 2017/12/31 17:07:10 by phmoulin         ###   ########.fr       */
+/*   Updated: 2018/03/10 15:09:30 by phmoulin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,8 @@ static int	init_param(t_env *e)
 	e->point = 0;
 	e->zero = -1;
 	e->plus = 0;
-	*e->type_convert = "*\0";
+	e->type_convert[0] = '*';
+	e->type_convert[1] = '\0';
 	e->carac = '\0';
 	e->line = NULL;
 	e->size_line = 0;
@@ -62,7 +63,6 @@ static int	init_param(t_env *e)
 	e->c = 0;
 	e->s = 0;
 	e->p = 0;
-	e->c = 0;
 	e->u = 0;
 	e->o = 0;
 	e->modulo = 0;
@@ -114,9 +114,10 @@ int			ft_printf(const char *restrict format, ...)
 	int		i;
 	int		i1;
 
+	i1 = 0;
 	va_start(ap, format);
 	i = init_param(&e);
-	browse_format(&e, format, &ap, i1);
+	browse_format(&e, (char *)format, &ap, i1);
 	if (e.line != NULL)
 		free(e.line);
 	return (e.size_line);
