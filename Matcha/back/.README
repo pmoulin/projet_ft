@@ -1,0 +1,7 @@
+Pour lancer le serveur postgres : postgres -D ~/.brew/var/postgres ou postgres -D /usr/local/var/postgres
+Lancer psql -f matcha.sql pour creer la bdd matcha avec la table users
+
+Voir si la table existe bien: 
+$ psql
+$ \c matcha -> aller sur la bdd matcha
+$ \d users -> voir les types des colonnes de table users
