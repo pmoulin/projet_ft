@@ -1,31 +1,71 @@
 FDF "fils de fer" :
-comment ouvrir une fenêtre graphique et dessiner dedans ?
-Pour commencer de la programmation graphique.
-FdF propose de représenter le maillage en "fils de fer" d'un terrain en 3D.
+   comment ouvrir une fenêtre graphique et dessiner dedans ?
+   Pour commencer de la programmation graphique.
+   FdF propose de représenter le maillage en "fils de fer" d'un terrain en 3D.
+   Langage :
+	C
 
 Get_next_line :
-Fonction permettant de recuperer ligne par ligne le contenu d'un fichier.
+   Fonction permettant de recuperer ligne par ligne le contenu d'un fichier.
+   Langage :
+	C
 
 LIBFT :
-Une replique de certaines fonctions de la libc (voir pdf joint).
-
+   Une replique de certaines fonctions de la libc (voir pdf joint).
+   Langage :
+	C
 Fract_ol :
-Programmation 2D et représentation des fractales (JULIA, MANDELBROT, BURNING SHIP),
-grâce à ce projet réalisé a l'aide de la minilibX.
+   Programmation 2D et représentation des fractales (JULIA, MANDELBROT, BURNING SHIP),
+   grâce à ce projet réalisé a l'aide de la minilibX.
+   Langage :
+	C
 
 Wolf3d :
-Inspiré du célèbre jeu éponyme des années 90 qui fût le premier First Person Shooter.
-ce projet permet d'aborder la technique du ray-casting.
-Le but est de représenter une vue dynamique à l'intérieur d'un labyrinthe dans lequel on peut se déplacer.
+   Inspiré du célèbre jeu éponyme des années 90 qui fût le premier First Person Shooter.
+   ce projet permet d'aborder la technique du ray-casting.
+   Le but est de représenter une vue dynamique à l'intérieur d'un labyrinthe dans lequel on peut se déplacer.
+   Langage :
+	C
 
 RT "Ray tracing" : (Projet en groupe de 4)
-Les principes fondamentaux du Raytracing : la création d'images de synthèses par ordinateur.
-Ce projet réalise des scènes impliquant des objets, des lumières, effet miroir, transparence, découpe des objets, applications de textures...
+   Les principes fondamentaux du Raytracing : la création d'images de synthèses par ordinateur.
+   Ce projet réalise des scènes impliquant des objets, des lumières, effet miroir, transparence, découpe des objets,
+   applications de textures...
+   Langage :
+	C
 
 ft_Printf : 
-Re-coder une grande partie de la fonction printf.
+   Re-coder une grande partie de la fonction printf.
+   Langage :
+	C
 
 Camagru :
     un petit site Instagram-like permettant à des utilisateurs de réaliser et partager des photo-montages.
-    langage : php, html, css, js et aucune framworks.
     fonctionnalités de base rencontrées sur la majorité des sites possédant une base utilisateur.
+    langage :
+	php, html, css, js et aucune framworks.
+
+Matcha :
+    concevoir une application permettant à un utilisateur de s’inscrire
+    et de renseigner ses détails personnels et ses préférences dans l’autre, en vue de pouvoir
+    matcher un autre utilisateur ayant un profil plus ou moins correspondant, parmi une
+    selection de profils d’autres utilisateurs que votre site proposera.
+    Une fois matcher, leas utilisateurs doivent pouvoir rentrer en contacte.
+    Langage :
+	back  : NodeJs, Express, MongoDb
+	front : VueJs
+
+Ft_malloc :
+   Ce miniproj consiste à concevoir une librairie de gestion de l’allocation dynamique de la
+   mémoire en réécrivant les fonctions malloc(3), free(3), et realloc(3) de la libc
+   Langage :
+	C
+
+Rush01_CPP : (Projet a 2)
+   Rush de 2 jours.
+   Concevoir un moniteur d'activiter sur Mac, avec une interface graphique (lib graphique : fltk) et les fonctionaliter de base :
+   Ram,
+   CPU,
+   Network,
+   info machine,
+   date/heure.
